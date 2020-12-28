@@ -1,0 +1,10 @@
+{
+  "Name": "BeachFarmSprinklers",
+  "Author": "Candidus42",
+  "Version": "1.0.0",
+  "Description": "Sprinklers on the beach farm",
+  "UniqueID": "Candidus42.BeachFarmSprinklers",
+  "EntryDll": "BeachFarmSprinklers.dll",
+  "MinimumApiVersion": "3.8.0",
+  "UpdateKeys": []
+}
