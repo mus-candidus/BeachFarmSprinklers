@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-using Harmony;
+using HarmonyLib;
 
 using StardewModdingAPI;
 using StardewValley;
@@ -11,7 +11,7 @@ using SObject = StardewValley.Object;
 namespace BeachFarmSprinklers {
     public class ModEntry : Mod {
         public override void Entry(IModHelper helper) {
-            HarmonyInstance harmony = HarmonyInstance.Create(this.ModManifest.UniqueID);
+            Harmony harmony = new Harmony(this.ModManifest.UniqueID);
 
             harmony.Patch(
                 original: AccessTools.Method(typeof(SObject), nameof(SObject.ApplySprinkler)),
