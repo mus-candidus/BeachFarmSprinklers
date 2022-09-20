@@ -27,10 +27,10 @@ namespace BeachFarmSprinklers {
         /// <summary>
         /// Patch method to disable the NoSprinklers check.
         /// </summary>
-        private static bool Before_Object_ApplySprinkler(SObject __instance, GameLocation location, Vector2 tile) {
+        private static bool Before_Object_ApplySprinkler(SObject __instance, Vector2 tile) {
             // Check terrain state and water if possible.
-            if (location.terrainFeatures.ContainsKey(tile)
-             && location.terrainFeatures[tile] is HoeDirt hoeDirt
+            if (__instance.Location.terrainFeatures.ContainsKey(tile)
+             && __instance.Location.terrainFeatures[tile] is HoeDirt hoeDirt
              && hoeDirt.state.Value != 2) {
                 hoeDirt.state.Value = 1;
             }
